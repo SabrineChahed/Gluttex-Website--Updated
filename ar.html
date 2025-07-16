@@ -1,6 +1,256 @@
 <!DOCTYPE html>
-<html>
-   <body>
-    <h1>Arabic Version</h1>
-   </body> 
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gluttex - تطبيق خالٍ من الغلوتين في الجزائر</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo 1.png" />
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  <script src="script.js" defer></script>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+    .gradient {
+      background: linear-gradient(90deg, #2ecc71 0%, #0b1d24 100%);
+    }
+    .gradient-wave path {
+      fill: url(#gradient);
+    }
+    .gradient-circle {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: transform 0.3s ease-in-out;
+    }
+    .gradient-circle:hover {
+      transform: scale(1.1);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #2ecc71 0%, #0b1d24 100%);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    #heroHeader, #heroSubHeader {
+      background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    #heroHeader, #heroSubHeader {
+      visibility: hidden;
+    }
+  </style>
+</head>
+
+<body class="leading-normal gradient tracking-normal text-white">
+  <!-- Navbar -->
+  <nav id="header" class="fixed w-full z-30 top-0 bg-white shadow-md">
+    <div class="container mx-auto flex items-center justify-between py-2">
+      <div class="flex items-center">
+        <a href="#" class="flex items-center">
+          <img src="gluttex_logo_optimized-background.png" alt="الشعار" class="w-32 h-auto pl-4" />
+        </a>
+      </div>
+      <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-black p-4 lg:p-0 z-20" id="nav-content">
+        <ul class="list-reset lg:flex justify-end flex-1 items-center">
+          <li class="ml-3">
+            <a class="inline-block py-2 px-4 font-bold gradient-text" href="#home">الرئيسية</a>
+          </li>
+          <li class="ml-3">
+            <a class="inline-block py-2 px-4 font-bold gradient-text" href="#about">حول</a>
+          </li>
+          <li class="ml-3">
+            <a class="inline-block py-2 px-4 font-bold gradient-text" href="#features">مميزات</a>
+          </li>
+          <li class="ml-3">
+            <a class="inline-block py-2 px-4 font-bold gradient-text" href="#testimonials">آراء المستخدمين</a>
+          </li>
+          <li class="ml-3">
+            <a class="inline-block py-2 px-4 font-bold gradient-text" href="#contactUs">اتصل بنا</a>
+          </li>
+
+          <!-- Language Switcher -->
+          <div class="relative inline-block text-left">
+            <button id="lang-button" class="flex items-center justify-center w-8 h-8">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="url(#grad1)" stroke-width="2">
+                <defs>
+                  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#2ecc71; stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#0b1d24; stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </button>
+            <div id="lang-menu" class="origin-top-right absolute left-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+              <div class="py-1">
+                <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">الإنجليزية</a>
+                <a href="fr.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">الفرنسية</a>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+<!-- Hero Section with image only -->
+<div class="pt-20 bg-cover bg-center bg-no-repeat" id="home" style="background-image: url('Gluten Free Lifestyle made Easiest For You.png'); height: 350px;"></div>
+
+
+  <!-- About -->
+  <section class="bg-white py-16 border-b">
+    <div class="container mx-auto px-4 text-center">
+      <h2 id="about" class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">حول التطبيق</h2>
+      <p class="max-w-3xl mx-auto text-gray-600 text-lg md:text-xl leading-relaxed">
+        Gluttex هو تطبيق شامل يدعم الأفراد الذين يتبعون نظاماً خالياً من الغلوتين في الجزائر، ويوفر موارد موثوقة، وتوصيات ذكية، ومجتمع متفاعل.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="bg-white border-b py-8">
+    <div class="container mx-auto pt-4 pb-12">
+      <h2 id="features" class="text-5xl font-bold leading-tight text-center text-gray-800">مميزات التطبيق</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 py-8">
+        <div class="bg-white border rounded-xl shadow-lg p-6 text-center">
+          <div class="text-green-600 font-bold text-xl">المتاجر والمطاعم</div>
+          <p class="mt-4 text-gray-800">اكتشف أماكن تقدم وجبات خالية من الغلوتين</p>
+        </div>
+        <div class="bg-white border rounded-xl shadow-lg p-6 text-center">
+          <div class="text-green-600 font-bold text-xl">وصفات</div>
+          <p class="mt-4 text-gray-800">اطلع على وصفات تقليدية وعالمية صحية ومناسبة للحمية الخالية من الغلوتين</p>
+        </div>
+        <div class="bg-white border rounded-xl shadow-lg p-6 text-center">
+          <div class="text-green-600 font-bold text-xl">متجر إلكتروني</div>
+          <p class="mt-4 text-gray-800">اطلب منتجات معتمدة خالية من الغلوتين من موردين موثوقين</p>
+        </div>
+        <div class="bg-white border rounded-xl shadow-lg p-6 text-center">
+          <div class="text-green-600 font-bold text-xl">ألعاب تعليمية</div>
+          <p class="mt-4 text-gray-800">تعلم عن الغلوتين والحساسية عبر اختبارات تفاعلية</p>
+        </div>
+        <div class="bg-white border rounded-xl shadow-lg p-6 text-center">
+          <div class="text-green-600 font-bold text-xl">معلومات صحية</div>
+          <p class="mt-4 text-gray-800">احصل على معلومات دقيقة عن حساسية الغلوتين وأعراضها</p>
+        </div>
+        <div class="bg-white border rounded-xl shadow-lg p-6 text-center">
+          <div class="text-green-600 font-bold text-xl">مجتمع داعم</div>
+          <p class="mt-4 text-gray-800">انضم إلى مجتمع متفاعل من الأشخاص الذين يتبعون حمية خالية من الغلوتين</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Section with Gradient Background -->
+<section class="container mx-auto text-center py-6 mb-12 gradient-background">
+  <h2 class="w-full my-2 text-5xl font-bold leading-tight text-white text-3xl">
+    لنرافقك في كل خطوة نحو حياة خالية من الغلوتين: تطبيق واحد، حلول لا نهائية..
+  </h2>
+  <div class="w-full mb-4"></div>
+  <h3 class="my-4 text-3xl leading-tight text-white">
+    <i>لأن الجميع يستحق العناية...</i>
+  </h3>
+</section>
+
+
+<section class="bg-white py-12 border-b">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 id="testimonials" class="text-4xl font-bold text-center text-gray-800 mb-10">
+      آراء المستخدمين
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="bg-white border border-gray-200 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+        <p class="text-gray-700 mb-4 text-center">
+          "غير Gluttex طريقتي في التعامل مع الحساسية — أجد كل شيء في مكان واحد!"
+        </p>
+        <div class="text-green-600 font-semibold text-center">أمينة من الجزائر</div>
+        <div class="text-yellow-400 text-center">★★★★★</div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white border border-gray-200 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+        <p class="text-gray-700 mb-4 text-center">
+          "ساعدتني الوصفات في تحضير أطباق تقليدية خالية من الغلوتين لعائلتي."
+        </p>
+        <div class="text-green-600 font-semibold text-center">صفية من وهران</div>
+        <div class="text-yellow-400 text-center">★★★★☆</div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white border border-gray-200 rounded-xl shadow-md p-6 hover:shadow-xl transition duration-300">
+        <p class="text-gray-700 mb-4 text-center">
+          "تعلمت الكثير عن نمط الحياة الخالي من الغلوتين — مفيد جدًا!"
+        </p>
+        <div class="text-green-600 font-semibold text-center">هبة من قسنطينة</div>
+        <div class="text-yellow-400 text-center">★★★★☆</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Call to Action -->
+  <section class="py-16 gradient-background text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+      مستعد لبدء رحلتك الخالية من الغلوتين؟
+    </h2>
+    <p class="text-lg text-green-100 mb-8">
+      جرب تطبيق Gluttex اليوم - رفيقك نحو نمط حياة أفضل!
+    </p>
+    <a href="https://drive.google.com/file/d/1Fsv3jPHnK79BYtkz0evJnboZVsBiK5nH/view?usp=sharing" target="_blank">
+      <button class="bg-white text-gray-800 font-bold rounded-full py-4 px-8 shadow-lg transition hover:scale-105">
+        <span class="gradient-text">جربه الآن</span>
+      </button>
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6" id="contactUs">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0">
+      <div class="flex items-center space-x-6">
+        <img class="w-24 md:w-32" src="gluttex_logo_optimized-background.png" alt="شعار" />
+        <ul class="flex space-x-6">
+          <li><a href="https://www.facebook.com/profile.php?id=61570343710690&mibextid=ZbWKwL" target="_blank" class="gradient gradient-circle text-white"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/_gluttex_/profilecard/?igsh=dXVjenR2amUwYzE2" target="_blank" class="gradient gradient-circle text-white"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://linkedin.com/company/gluttex" target="_blank" class="gradient gradient-circle text-white"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="mailto:gluttex.team@gmail.com" class="gradient gradient-circle text-white"><i class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('lang-button');
+    const menu = document.getElementById('lang-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!btn.contains(e.target) && !menu.contains(e.target)) {
+        menu.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
 </html>

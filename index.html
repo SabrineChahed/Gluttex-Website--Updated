@@ -109,146 +109,74 @@
   </head>
   
 <!--BODY-->
-  <body class="leading-normal gradient tracking-normal text-white " style="font-family: 'Source Sans Pro', sans-serif;" dir="ltr">
+ 
+  <body class="leading-normal gradient tracking-normal text-white" style="font-family: 'Source Sans Pro', sans-serif;" dir="ltr">
 
-
-
-    <!-- Navbar -->
-
-
-
-    <nav id="header" class="fixed w-full z-30 top-0 bg-white shadow-md">
+    <nav class="fixed w-full z-30 top-0 bg-white shadow-md">
       <div class="container mx-auto flex items-center justify-between py-2">
-        <!-- Logo Section -->
         <div class="flex items-center">
           <a href="#" class="flex items-center">
-          
             <img src="gluttex_logo_optimized-background.png" alt="Logo" class="w-32 h-auto pl-4" />
-
           </a>
         </div>
-    
-        <!-- Navbar Links Section -->
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-black p-4 lg:p-0 z-20" id="nav-content">
+
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-black p-4 lg:p-0 z-20">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li class="mr-3">
-              <a class="inline-block py-2 px-4 font-bold hover:text-gray-800  no-underline gradient-text" href="#home" id="whatIsGluttex">Home</a>
+            <li class="mr-3"><a class="inline-block py-2 px-4 font-bold gradient-text" href="#home">Accueil</a></li>
+            <li class="mr-3"><a class="inline-block py-2 px-4 font-bold gradient-text" href="#about">A propos</a></li>
+            <li class="mr-3"><a class="inline-block py-2 px-4 font-bold gradient-text" href="#features">Fonctionnalités</a></li>
+            <li class="mr-3"><a class="inline-block py-2 px-4 font-bold gradient-text" href="#testimonials">Témoignages</a></li>
+            <li class="mr-3"><a class="inline-block py-2 px-4 font-bold gradient-text" href="#contactUs">Contact</a></li>
+            <li class="relative">
+              <button id="lang-button" class="flex items-center justify-center w-8 h-8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="url(#grad1)" stroke-width="2">
+                  <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#2ecc71; stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#0b1d24; stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </button>
+              <div id="lang-menu" class="origin-top-right absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
+                <div class="py-1">
+                  <a href="index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Anglais</a>
+                  <a href="ar.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Arabe</a>
+                </div>
+              </div>
             </li>
-
-             <li class="mr-3">
-              <a class="inline-block no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-4 gradient-text" href="#about">About</a>
-            </li>
-       
-            <li class="mr-3">
-              <a class="inline-block no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-4 gradient-text" href="#features">Features</a>
-            </li>
-
-                       <li class="mr-3">
-              <a class="inline-block no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-4 gradient-text" href="#testimonials">Testimonials</a>
-            </li>
-
-
-            <li class="mr-3">
-              <a class="inline-block no-underline font-bold hover:text-gray-800 hover:text-underline py-2 px-4 gradient-text" href="#contactUs">Contact us</a>
-            </li>
-
-
-
-
-            <!-- Language Switcher Container -->
-<div class="relative inline-block text-left">
-  <!-- Globe Icon Button -->
-  <button id="lang-button" class="flex items-center justify-center w-8 h-8">
-    <svg xmlns="http://www.w3.org/2000/svg"
-         class="w-6 h-6"
-         fill="none"
-         viewBox="0 0 24 24"
-         stroke="url(#grad1)"
-         stroke-width="2">
-      <defs>
-        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#2ecc71; stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#0b1d24; stop-opacity:1" />
-        </linearGradient>
-      </defs>
-      <circle cx="12" cy="12" r="10"/>
-      <line x1="2" y1="12" x2="22" y2="12"/>
-      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-    </svg>
-  </button>
-
-  <!-- Dropdown Menu -->
-  <div id="lang-menu" class="origin-top-right absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden">
-    <div class="py-1">
-
-      <a href="ar.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Arabic</a>
-      <a href="fr.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">French</a>
-    </div>
-  </div>
-</div>
-
-<!-- Simple Script to Toggle -->
-<script>
-  const btn = document.getElementById('lang-button');
-  const menu = document.getElementById('lang-menu');
-
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-
-  // Optional: Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!btn.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.add('hidden');
-    }
-  });
-</script>
-
-
-
-
-
-
-
-
-
-           
-
           </ul>
-
-         
-
         </div>
       </div>
     </nav>
+    <script>
+      const langBtn = document.getElementById('lang-button');
+      const langMenu = document.getElementById('lang-menu');
+
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        langMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!langMenu.contains(e.target) && !langBtn.contains(e.target)) {
+          langMenu.classList.add('hidden');
+        }
+      });
+    </script>
+      
+
+
     
 
 
 <!-- Hero Section -->
-<div
-class="pt-20 bg-cover bg-center bg-no-repeat text-white"
-id="home"
-style="background-image: url('Gluten Free Lifestyle made Easiest For You.png');"
->
-<!-- Add padding top to the hero to ensure it doesn't overlap the navbar -->
-<div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-  <!-- Left Col -->
-  <div class="flex flex-col w-full md:w-3/5 justify-center items-start text-center md:text-left bg-opacity-80">
+<!-- Hero Section with image only -->
+<div class="pt-20 bg-cover bg-center bg-no-repeat" id="home" style="background-image: url('Gluten Free Lifestyle made Easiest For You.png') ; height: 350px;"></div>
 
-
-    <h1 class="my-4 text-5xl font-bold leading-tight text-white" id="heroHeader">
-      Gluten Free Lifestyle <br> 
-      Made Easiest for You
-    </h1>
-    
-    <p class="leading-normal text-2xl mb-8 text-white" id="heroSubHeader">
-      Celiac Management Application
-    </p>
-    
-
-  </div>
-</div>
-</div>
 
 
 <!-- Improved About Section -->
